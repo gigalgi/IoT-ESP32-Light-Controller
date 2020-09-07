@@ -1,0 +1,55 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Light Switch with CSS3 &amp; HTML5</title>
+  <meta name="description" content="iOS Switch CSS3">
+  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
+  <meta property="og:title" content="Light Switch with CSS3 &amp; HTML5" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.55"/>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div>
+  <button>
+    <span>
+      <b>I</b> <b>O</b>
+    </span>
+  </button>
+  </div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    /* iOS re-orientation fix */
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+      var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
+      if (viewportmeta) {
+        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+        document.body.addEventListener('gesturestart', function() {
+          viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+        }, false);
+      }
+      /* iOS hides Safari address bar */
+      window.addEventListener("load",function() {
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 1000);
+      });
+    }
+    $(document).ready(function(){
+      /* on button click, toggle class "OFF" for the switch */
+      $("button").click(function () {
+        $("button").toggleClass("off");
+        $("#bt2").hasClass("")
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!--CREATED (C) BY ALEX CICAN              APRIL 2012
+   HTTP://SICANSTUDIOS.COM
+   https://github.com/alexcican/lab/tree/gh-pages/switch
+   MODIFIED BY GILBERTO GALVIS 2019 -->
