@@ -34,7 +34,7 @@ while True:
   request = str(request)
   print('Content = %s' % request)
   
-  #espera respuesta del precinar el boton aytavez del metodo GET
+  #espera respuesta del precinar el boton a traves del metodo GET
   led_on = request.find('/?led=on')
   led_off = request.find('/?led=off')
   
