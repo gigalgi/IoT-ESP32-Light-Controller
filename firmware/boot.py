@@ -16,7 +16,7 @@ gc.collect()
 
 import utime
 
-# credenciales para conectase al la red 
+# credenciales para conectase con la red 
 ssid = 'nombre de la red aqui' 
 password = 'contrasena aqui'
 
