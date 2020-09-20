@@ -27,7 +27,7 @@ station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect(ssid, password)
 
-#es[eradno hasta opetner conexion y establecer una ip]
+#esperando hasta obtener conexion y establecer una ip
 while station.isconnected() == False:
 	print('waiting...')
 	pass
